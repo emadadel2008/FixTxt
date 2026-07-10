@@ -19,3 +19,12 @@ Object.assign(String.prototype, {
       .join("\n");
   },
 });
+
+Object.assign(String.prototype, {
+  detectDirection() {
+    const clean = this.replace(/\u202A|\u202B|\u202C/g, "");
+    const rtl = (clean.match(/[\u0600-\u06FF\u0750-\u077F\u0590-\u05FF\uFB50-\uFDFF\uFE70-\uFEFF]/g) || []).length;
+    const ltr = (clean.match(/[a-zA-Z]/g) || []).length;
+    return rtl >= ltr ? "rtl" : "ltr";
+  },
+});

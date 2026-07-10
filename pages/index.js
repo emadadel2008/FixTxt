@@ -61,10 +61,29 @@ export default function Home() {
 
       <Container component="footer" sx={{ mt: "auto", py: 3 }}>
         <Typography variant="body1">
-          Made with ❤️ in 🇶🇦 by{" "}
-          <a href="https://mawqey.com/">Abdulrahman Saleh Khamis</a>
+          Modified by{" "}
+          <a
+            href="https://github.com/emadadel2008"
+            target="_blank"
+            rel="noopener noreferrer"
+          >
+            emadadel2008
+          </a>
         </Typography>
-        <Typography variant="body1">Copyright &copy; 2022</Typography>
+        <Typography variant="body2" color="text.secondary">
+          Based on the original{" "}
+          <a
+            href="https://github.com/alotaiba/FixTxt"
+            target="_blank"
+            rel="noopener noreferrer"
+          >
+            FixTxt
+          </a>{" "}
+          made with ❤️ in 🇶🇦 by Abdulrahman Saleh Khamis
+        </Typography>
+        <Typography variant="body1">
+          Copyright &copy; {new Date().getFullYear()}
+        </Typography>
       </Container>
     </Container>
   );
