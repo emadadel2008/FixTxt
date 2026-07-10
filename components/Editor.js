@@ -38,8 +38,15 @@ const TextArea = styled("textarea")(
 );
 
 const EditorButton = styled(IconButton)(() => ({
-  border: "1px solid #ccc",
-  borderRadius: 0,
+  border: "1px solid #E2E8F0",
+  borderRadius: 8,
+  color: "#64748B",
+  transition: "all 0.15s ease",
+  "&:hover": {
+    backgroundColor: "rgba(79, 70, 229, 0.08)",
+    borderColor: "#818CF8",
+    color: "#4F46E5",
+  },
 }));
 
 function detectDir(text) {
@@ -191,7 +198,7 @@ export default function Editor() {
   };
 
   return (
-    <Box sx={{ border: "1px solid #ccc", p: 1 }}>
+    <Box sx={{ p: 2 }}>
       {/* ── Toolbar ── */}
       <Stack
         direction="row"
@@ -305,11 +312,11 @@ export default function Editor() {
       )}
 
       {/* ── Content area ── */}
-      <Box sx={{ borderTop: "1px solid #ccc" }}>
+      <Box sx={{ borderTop: "1px solid #E2E8F0" }}>
         {splitView ? (
           <Grid container spacing={0}>
             {/* Left: input */}
-            <Grid item xs={6} sx={{ borderRight: "1px solid #ccc" }}>
+            <Grid item xs={6} sx={{ borderRight: "1px solid #E2E8F0" }}>
               <Typography
                 variant="caption"
                 color="text.secondary"
